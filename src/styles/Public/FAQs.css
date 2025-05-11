@@ -1,0 +1,69 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap");
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	scroll-behavior: smooth;
+	font-family: "Poppins", sans-serif;
+	transition: 0.2s;
+}
+
+:root {
+	--mainColor: #f2e6d6;
+	--primaryTextColor: #474747;
+	--hoverColor: #d4bb9a;
+}
+
+.FAQs-page {
+	padding-top: 10vh;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+}
+
+.FAQs-page .header {
+	padding: 50px 12%;
+	background-color: rgb(207, 207, 207);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.FAQs-page .header h1 {
+	font-size: 50px;
+	text-align: center;
+}
+
+.FAQs-page .header p {
+	font-size: 15px;
+	text-align: center;
+}
+
+.FAQs-page .list {
+	padding: 50px 12%;
+}
+
+.FAQs-page .list ul {
+	display: flex;
+	flex-direction: column;
+	gap: 50px;
+}
+
+.FAQs-page .list ul li {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+
+.FAQs-page .closing {
+	text-align: center;
+	margin-top: 50px;
+	font-size: 15px;
+}

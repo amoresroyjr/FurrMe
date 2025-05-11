@@ -1,0 +1,94 @@
+/* Overlay that covers the whole screen */
+.rmodal-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 0;
+	visibility: hidden;
+	transition:
+		opacity 0.3s ease,
+		visibility 0.3s ease;
+	z-index: 1000;
+}
+
+.rmodal-overlay.show {
+	opacity: 1;
+	visibility: visible;
+}
+
+/* Modal content container */
+.rmodal-content {
+	background: white;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+	max-width: 500px;
+	width: 90%;
+	text-align: center;
+	transform: translateY(-50%);
+	transition: transform 0.5s ease;
+	position: relative;
+}
+
+/* Slide-in animation */
+.rmodal-content.slide-in {
+	transform: translateY(0);
+}
+
+/* Slide-out animation */
+.rmodal-content.slide-out {
+	transform: translateY(-50%);
+}
+
+/* Close button */
+.rclose-button {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background: none;
+	border: none;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+/* Okay button style */
+.rokay-button {
+	background-color: #474747;
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	font-size: 16px;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 20px;
+}
+
+.rokay-button:hover {
+	background-color: #9c784a;
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+	.rmodal-content {
+		max-width: 90%;
+		padding: 15px;
+	}
+
+	.rclose-button {
+		font-size: 20px;
+	}
+
+	h2 {
+		font-size: 20px;
+	}
+
+	.rokay-button {
+		font-size: 14px;
+	}
+}

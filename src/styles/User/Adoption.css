@@ -1,0 +1,354 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap");
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	scroll-behavior: smooth;
+	font-family: "Poppins", sans-serif;
+	transition: 0.2s;
+}
+
+:root {
+	--mainColor: #f2e6d6;
+	--primaryTextColor: #474747;
+	--hoverColor: #d4bb9a;
+}
+
+.adoptionVerificationPage {
+	padding-top: 10vh;
+}
+
+.adoptionVerificationContainer {
+	display: flex;
+	flex-direction: row;
+}
+
+.adoptionVerificationContainer .petDetails {
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 5%;
+}
+
+.adoptionVerificationContainer .petDetails .petDetailsImgContainer {
+	max-width: 300px;
+	height: auto;
+	border-radius: 7px;
+	overflow: hidden;
+}
+
+.adoptionVerificationContainer .petDetails h3 {
+	padding-bottom: 10px;
+}
+
+.adoptionVerificationContainer
+	.petDetails
+	.petDetailsImgContainer
+	.petDetailsImg {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.adoptionVerificationContainer .petDetails h2 {
+	font-size: 40px;
+	margin: 0;
+}
+
+.adoptionVerification {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	width: 100%;
+}
+
+.adoptionVerification .header {
+	margin-top: 20px;
+	width: 60%;
+	padding: 10px 20px;
+	text-align: center;
+}
+
+.adoptionVerification .header h2 {
+	font-size: 1.875rem;
+}
+
+.adoptionVerification .header p {
+	color: rgb(104, 104, 104);
+	font-size: 15px;
+}
+
+.adoptionVerification .inputContainer {
+	width: 90%;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	border: 1px solid rgb(207, 207, 207);
+	border-radius: 10px;
+	margin-top: 10px;
+}
+
+.inputWarningWrapper {
+	position: relative;
+	width: 100%;
+}
+
+.inputWarningWrapper textarea,
+input {
+	width: 100%;
+	box-sizing: border-box;
+	padding-right: 50px;
+}
+
+.warningInside {
+	position: absolute;
+	top: 8px;
+	right: 10px;
+	color: red;
+	font-size: 1.5rem;
+	pointer-events: none;
+	z-index: 1;
+}
+
+.adoptionVerification .petNamePrev {
+	color: var(--primaryTextColor);
+	text-align: center;
+}
+
+.adoptionVerification .inputContainer label {
+	font-size: 15px;
+	margin-bottom: 5px;
+}
+
+.adoptionVerification .inputContainer input,
+textarea {
+	border: 1px solid rgb(207, 207, 207);
+	border-radius: 5px;
+	font-size: 13px;
+	padding: 10px;
+	margin-bottom: 10px;
+	height: 100%;
+}
+
+.attachValidID {
+	width: 100%;
+	display: flex;
+	height: 50px;
+	gap: 10px;
+	align-items: center;
+}
+
+.btnValidID {
+	height: 100%;
+	white-space: nowrap; /* Prevent text from wrapping */
+	overflow: hidden; /* Hide overflowed text */
+	text-overflow: ellipsis; /* Add ellipsis (...) when text is too long */
+}
+
+.adoptionVerification .btnValidID {
+	background: none;
+	border: 1px solid rgb(207, 207, 207);
+	width: 100%;
+	border-radius: 5px;
+	color: rgb(158, 158, 158);
+	padding: 7px;
+	text-align: start;
+	cursor: pointer;
+}
+
+.adoptionVerification .btnValidID:hover {
+	border: 1px solid black;
+}
+
+.removeID {
+	margin-right: 10px;
+	color: rgb(158, 158, 158);
+}
+
+.removeID:hover {
+	color: black;
+	cursor: pointer;
+	transform: scale(1.04);
+}
+
+.adoptionVerification #address {
+	resize: none;
+}
+
+.adoptionVerificationContainer .adoptionVerification .inputContainer .respBox {
+	height: 120px;
+	resize: none;
+	font-size: 14px;
+}
+
+.adoptionVerificationContainer
+	.adoptionVerification
+	.inputContainer
+	.charCount {
+	font-size: 10px;
+	margin-top: -7px;
+	margin-bottom: 12px;
+}
+
+.adoptionVerificationContainer
+	.adoptionVerification
+	.inputContainer
+	.respDisclaimer {
+	font-size: 12px;
+	color: rgb(141, 141, 141);
+	text-align: center;
+}
+
+.TAC-header {
+	margin-top: 20px;
+	border: none;
+	background-color: rgb(233, 233, 233);
+	width: 100%;
+	padding: 8px 20px;
+	border-radius: 7px;
+	font-size: 15px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.TAC-header:hover {
+	transform: scale(1.01);
+}
+
+.adoptionVerification .TAC-container {
+	width: 90%;
+	position: relative;
+}
+
+.termsAndConditions {
+	padding: 20px;
+	width: 100%;
+	border: 1px solid rgb(233, 233, 233);
+	border-radius: 7px;
+	background-color: rgb(240, 240, 240);
+}
+
+.termsAndConditions .commitmentHeader {
+	margin: 15px 0;
+}
+
+.termsAndConditions h4 {
+	margin-top: 15px;
+}
+
+.termsAndConditions p {
+	font-size: 13px;
+}
+
+.adoptionVerification .termsAndConditions .privacyHeader {
+	margin-top: 40px;
+}
+
+.adoptionVerification .termsAndConditions .TAC-title,
+.commitmentHeader,
+.privacyHeader {
+	text-align: center;
+}
+
+.adoptionVerification .verTAC {
+	font-size: 11px;
+	width: 90%;
+	margin-top: 30px;
+	margin-bottom: -15px;
+}
+
+.adoptionVerification .submitBtn {
+	background-color: var(--primaryTextColor);
+	color: white;
+	padding: 8px;
+	width: 90%;
+	border-radius: 7px;
+	cursor: pointer;
+	margin: 15px 0;
+	transition: margin-top 0.5s ease;
+}
+
+.adoptionVerification .submitBtn:hover {
+	background-color: #4e4e4e;
+}
+@media (max-width: 768px) {
+	.adoptionVerificationContainer {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.petDetails {
+		margin-top: 10%;
+		width: 100%;
+		padding: 3%;
+	}
+
+	.petDetails h2 {
+		margin-top: 10%;
+	}
+
+	.adoptionVerificationContainer .petDetails,
+	.adoptionVerification {
+		width: 100%;
+		padding: 0% 3%;
+	}
+
+	.adoptionVerification .header,
+	.adoptionVerification .inputContainer,
+	.adoptionVerification .TAC-container,
+	.adoptionVerification .submitBtn,
+	.adoptionVerification .verTAC {
+		width: 90%;
+	}
+
+	.adoptionVerificationContainer .petDetails .petDetailsImgContainer {
+		max-width: 50%;
+	}
+}
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+}
+
+/* Hide number input arrows in Firefox */
+input[type="number"] {
+	-moz-appearance: textfield;
+}
+.loadingOverlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, 0.5);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 9999;
+	display: flex;
+	flex-direction: column;
+}
+
+.loadingImage {
+	width: 200px;
+	height: 200px;
+	object-fit: contain;
+}
+
+.loadingOverlay p {
+	color: white;
+	font-size: 16px;
+	text-align: center;
+}

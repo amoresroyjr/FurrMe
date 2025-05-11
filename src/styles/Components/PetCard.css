@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap");
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	scroll-behavior: smooth;
+	font-family: "Poppins", sans-serif;
+	transition: 0.2s;
+}
+
+:root {
+	--mainColor: #f2e6d6;
+	--primaryTextColor: #474747;
+}
+
+.petCard {
+	width: min(40vw, 40vh);
+	height: min(55vh, 55vw);
+	padding: 3%;
+	border: 1px solid #ccc;
+	border-radius: 7px;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+	background-color: var(--mainColor);
+}
+
+.petCard:hover {
+	cursor: pointer;
+	transform: scale(1.02);
+}
+
+.petImgContainer {
+	height: 60%;
+	overflow: hidden;
+}
+
+.petImage {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 5px;
+}
+
+.petName {
+	margin: 10% 0% 5% 0%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	color: var(--primaryTextColor);
+	white-space: nowrap;
+}
+
+.petAddress {
+	display: flex;
+	color: var(--primaryTextColor);
+}
+
+.petName h2 {
+	font-size: min(4vw, 3vh);
+}
+
+.petDetails {
+	display: flex;
+	flex-direction: column;
+	color: var(--primaryTextColor);
+}
+
+.petInfo {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.petInfo p {
+	font-size: min(3vw, 2vh);
+	margin-left: 10%;
+}
+
+.petInfo i {
+	font-size: min(2vw, 2vh);
+	position: absolute;
+	translate: (-50%, -50%);
+}
+
+@media screen and (max-width: 960px) {
+	.petCard {
+		padding: 5% 5% 5% 5%;
+	}
+	.petName h2 {
+		font-size: min(3vw, 2.5vh);
+	}
+	.petInfo p {
+		font-size: min(2vw, 1.5vh);
+		gap: 10px;
+	}
+}

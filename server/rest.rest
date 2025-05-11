@@ -1,0 +1,15 @@
+
+
+POST http://localhost:3001/admin/create
+Content-Type: application/json
+
+{
+     "images" :[
+    "blob:http://localhost:3000/7019538a-b8c1-44dd-b32e-c9e9e02fdba4",
+    "blob:http://localhost:3000/79081bae-c82d-45de-a8b8-09b6878e0e68",
+    "blob:http://localhost:3000/f22d70ae-7286-408e-8917-fc9f155682c7",
+    "blob:http://localhost:3000/8bd7e074-36bd-4147-b3bd-208caa447778",
+    "blob:http://localhost:3000/f234272f-dce4-4804-9b41-9498c8f6a627",
+    "blob:http://localhost:3000/9ba0dd7d-9d2a-47f9-926d-39dc657bf68a"
+  ]
+}

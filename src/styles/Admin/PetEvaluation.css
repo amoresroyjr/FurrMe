@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap");
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	scroll-behavior: smooth;
+	font-family: "Poppins", sans-serif;
+	transition: 0.2s;
+}
+
+:root {
+	--mainColor: #f2e6d6;
+	--primaryTextColor: #474747;
+}
+
+.adminEvaluation {
+	display: flex;
+	height: 100vh;
+}
+
+.adminEvaluation .sidebarComp {
+	min-width: 20%;
+	height: 100%;
+}
+
+.adminEvaluation .mainContent {
+	flex: 1;
+	padding: 0 10%;
+	overflow-x: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.adminEvaluation .mainContent .applicantInfoHeader {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	text-wrap: nowrap;
+	padding: 10px 0;
+	gap: 20px;
+	flex-wrap: wrap;
+}
+
+.adminEvaluation .mainContent .applicantInfoHeader p {
+	font-size: 14px;
+}
+
+.adminEvaluation .mainContent .applicantInfoHeader .appStatus {
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.adminEvaluation .mainContent .applicantInfoHeader .appStatus .appStatusVal {
+	padding: 3px 15px;
+	border: 1px solid rgb(211, 211, 211);
+	border-radius: 20px;
+}
+
+.adminEvaluation .InformationContainer {
+	border: 1px solid rgb(211, 211, 211);
+	border-radius: 7px;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 50px;
+}
+
+.adminEvaluation .InformationContainer .applicantInfo {
+	display: flex;
+	width: 100%;
+	gap: 30px;
+	padding: 5px 0;
+}
+
+.adminEvaluation .InformationContainer .applicantInfo .lbl-disp {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50%;
+	gap: 3px;
+}
+
+.adminEvaluation .InformationContainer .applicantInfo .lbl-disp .dispLabels {
+	font-size: 14px;
+}
+
+.adminEvaluation
+	.InformationContainer
+	.applicantInfo
+	.lbl-disp.validIdPrev
+	.validID-fileName {
+	padding: 5px 10px;
+	width: 100%;
+	border: 1px solid rgb(211, 211, 211);
+	border-radius: 7px;
+	font-size: 13px;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.adminEvaluation
+	.InformationContainer
+	.applicantInfo
+	.lbl-disp.validIdPrev
+	.validID-fileName:hover {
+	background-color: rgb(218, 218, 218);
+}
+
+.adminEvaluation .InformationContainer .applicantInfo .lbl-disp input {
+	padding: 5px 10px;
+	font-size: 13px;
+	border: 1px solid rgb(211, 211, 211);
+	border-radius: 7px;
+}
+
+.adminEvaluation .InformationContainer .applicantInfo .lbl-disp input:hover,
+.adminEvaluation .mainContent .petInfo input:hover {
+	background-color: rgb(218, 218, 218);
+}
+
+.adminEvaluation .InformationContainer .applicantInfo .lbl-disp input:focus {
+	outline: none;
+}
+
+.adminEvaluation .infoDropdownsContainer {
+	width: 100%;
+	font-size: 14px;
+}
+
+.adminEvaluation .infoDropdownsContainer .dropdown {
+	width: 100%;
+	padding: 10px 0;
+	margin: 15px 0;
+}
+
+.adminEvaluation .infoDropdownsContainer .dropdown p {
+	padding: 5px 10px;
+	border: 1px solid rgb(211, 211, 211);
+	border-radius: 7px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+	background-color: var(--primaryTextColor);
+	color: white;
+}
+
+.adminEvaluation .infoDropdownsContainer .dropdown p:hover {
+	background-color: rgb(87, 86, 86);
+}
+
+.adminEvaluation .infoDropdownsContainer .dpCont {
+	padding: 5px 10px;
+	border: 1px solid rgb(211, 211, 211);
+	border-radius: 7px;
+	background-color: rgb(235, 235, 235);
+}
+
+.adminEvaluation .informationContainer.petInfoCont {
+	border: 1px solid rgb(211, 211, 211);
+	border-radius: 7px;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	margin-bottom: 50px;
+}
+
+.adminEvaluation .mainContent .petInfo {
+	display: flex;
+	width: 100%;
+	gap: 30px;
+	padding: 5px 0;
+}
+
+.adminEvaluation .mainContent .petInfo .lbl-disp {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 50%;
+	gap: 3px;
+}
+
+.adminEvaluation .mainContent .petInfo .lbl-disp .dispLabels {
+	font-size: 14px;
+}
+
+.adminEvaluation .mainContent .petInfo .lbl-disp input {
+	padding: 5px 10px;
+	font-size: 13px;
+	border: 1px solid rgb(211, 211, 211);
+	border-radius: 7px;
+}
+
+.adminEvaluation .mainContent .petInfo .lbl-disp input:focus {
+	outline: none;
+}
+
+.adminEvaluation .mainContent .evalResultCont {
+	margin-bottom: 50px;
+	width: 100%;
+	padding: 30px;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+	border: 1px solid rgb(211, 211, 211);
+	border-radius: 7px;
+}
+
+.adminEvaluation .mainContent .evalResultCont .buttons {
+	width: 100%;
+	display: flex;
+	gap: 30px;
+}
+
+.adminEvaluation .mainContent .evalResultCont .buttons .selected {
+	background-color: rgb(218, 218, 218);
+}
+
+.adminEvaluation .mainContent .evalResultCont button {
+	border: 1px solid rgb(211, 211, 211);
+	background-color: white;
+	padding: 5px 0;
+	font-size: 14px;
+	cursor: pointer;
+	border-radius: 7px;
+	width: 50%;
+}
+
+.adminEvaluation .mainContent .evalResultCont .evalSubmitButton {
+	width: 100%;
+	background-color: var(--primaryTextColor);
+	color: white;
+}
+
+.adminEvaluation .mainContent .evalResultCont button:hover {
+	background-color: rgb(100, 100, 100);
+}
+
+.adminEvaluation .mainContent .evalResultCont .rejectReasonCont {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+}
+
+.adminEvaluation .mainContent .evalResultCont .buttons .selected {
+	background-color: rgb(218, 218, 218);
+}
+
+.adminEvaluation .mainContent .evalResultCont .rejectReasonCont textarea {
+	resize: none;
+	height: 80px;
+}
+
+.adminEvaluation .mainContent .evalResultCont .rejectReasonCont p {
+	font-size: 10px;
+	margin-top: -9px;
+}
+
+@media (max-width: 500px) {
+	.adminEvaluation .mainContent .applicantInfoHeader h1 {
+		font-size: 24px;
+		text-align: center;
+	}
+	.adminEvaluation .mainContent {
+		padding: 5% 5%;
+	}
+
+	.adminEvaluation .mainContent .applicantInfoHeader p {
+		font-size: 8px;
+	}
+}
+
+@media (max-width: 768px) {
+	.adminEvaluation .mainContent .applicantInfoHeader p {
+		font-size: 12px;
+		text-align: center;
+	}
+	.adminEvaluation .mainContent .applicantInfoHeader {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+}

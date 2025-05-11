@@ -1,0 +1,466 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap");
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	scroll-behavior: smooth;
+	font-family: "Poppins", sans-serif;
+	transition: 0.2s;
+}
+
+:root {
+	--mainColor: #f2e6d6;
+	--primaryTextColor: #474747;
+}
+
+.createPetListing {
+	display: flex;
+	height: 100vh;
+}
+
+.createPetListing .sidebarComp {
+	min-width: 20%;
+	min-height: 100vh;
+}
+
+.createPetListing .mainContent {
+	flex: 1;
+	overflow-x: hidden;
+}
+
+.createPetListing .mainContent .inputsContainer {
+	width: 60%;
+	margin: 50px auto 0 auto;
+	padding-bottom: 50px;
+	display: flex;
+	flex-direction: column;
+	font-size: 15px;
+}
+
+.createPetListing .mainContent .inputsContainer h2 {
+	font-size: 25px;
+	color: var(--primaryTextColor);
+}
+
+.createPetListing .mainContent .inputsContainer .basicInfo {
+	display: flex;
+	flex-direction: column;
+	gap: 15px;
+	padding: 20px 0;
+}
+
+.createPetListing
+	.mainContent
+	.inputsContainer
+	.basicInfo
+	.nameGenderContainer {
+	display: flex;
+	align-items: center;
+	width: 100%;
+	gap: 20px;
+	color: var(--primaryTextColor);
+}
+
+.createPetListing
+	.mainContent
+	.inputsContainer
+	.basicInfo
+	.nameGenderContainer
+	.inputs {
+	width: 50%;
+	max-width: 50%;
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+}
+
+.error-input {
+	border-color: red;
+}
+
+@keyframes shake {
+	0%,
+	100% {
+		transform: translateX(0);
+	}
+	20%,
+	60% {
+		transform: translateX(-5px);
+	}
+	40%,
+	80% {
+		transform: translateX(5px);
+	}
+}
+
+.shake {
+	animation: shake 0.5s ease;
+}
+
+.error-message {
+	color: red;
+	font-size: 14px;
+	margin-top: 5px;
+}
+
+.createPetListing
+	.mainContent
+	.inputsContainer
+	.basicInfo
+	.nameGenderContainer
+	.inputs.inputs.petGender {
+	position: relative;
+}
+
+.createPetListing
+	.mainContent
+	.inputsContainer
+	.basicInfo
+	.nameGenderContainer
+	.inputs
+	input {
+	width: 100%;
+}
+
+.createPetListing
+	.mainContent
+	.inputsContainer
+	.basicInfo
+	.nameGenderContainer
+	.inputs
+	p {
+	padding: 5px 10px;
+	border: 1px solid rgb(200, 200, 200);
+	border-radius: 7px;
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+	text-wrap: nowrap;
+	width: 100%;
+	position: relative;
+}
+
+.createPetListing
+	.mainContent
+	.inputsContainer
+	.basicInfo
+	.nameGenderContainer
+	.inputs.petGender
+	ul {
+	position: absolute;
+	width: 100%;
+	border: 1px solid rgb(200, 200, 200);
+	border-radius: 7px;
+	padding: 10px;
+	background-color: white;
+	top: 55px;
+}
+
+.createPetListing
+	.mainContent
+	.inputsContainer
+	.basicInfo
+	.nameGenderContainer
+	.inputs.petGender
+	ul
+	li {
+	padding: 5px 10px;
+	cursor: pointer;
+	border-radius: 7px;
+}
+
+.createPetListing
+	.mainContent
+	.inputsContainer
+	.basicInfo
+	.nameGenderContainer
+	.inputs.petGender
+	ul
+	li:hover {
+	background-color: rgb(221, 221, 221);
+}
+
+.createPetListing
+	.mainContent
+	.inputsContainer
+	.basicInfo
+	.nameGenderContainer
+	input {
+	padding: 5px 10px;
+	border: 1px solid rgb(200, 200, 200);
+	border-radius: 7px;
+	font-size: 14px;
+	background-color: none;
+}
+
+.createPetListing .mainContent .inputsContainer .basicInfo .containers input {
+	padding: 5px 10px;
+	border: 1px solid rgb(200, 200, 200);
+	border-radius: 7px;
+	font-size: 14px;
+	margin-left: 10px;
+}
+
+.createPetListing .mainContent .inputsContainer .petNameContainer {
+	display: flex;
+	flex-direction: column;
+}
+
+.createPetListing .mainContent .inputsContainer .containers {
+	display: flex;
+	gap: 20px;
+	background-color: red;
+}
+
+.createPetListing .mainContent .inputsContainer .containers label {
+	color: var(--primaryTextColor);
+}
+
+.createPetListing .mainContent .inputsContainer .containers .inputs {
+	display: flex;
+	width: 50%;
+	max-width: 50%;
+	flex-direction: column;
+}
+
+.createPetListing .mainContent .inputsContainer .containers .inputs.type p {
+	padding: 5px 10px;
+	border: 1px solid rgb(200, 200, 200);
+	border-radius: 7px;
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	cursor: pointer;
+	text-wrap: nowrap;
+}
+
+.createPetListing .mainContent .inputsContainer .containers .inputs.type {
+	position: relative;
+}
+
+.createPetListing
+	.mainContent
+	.inputsContainer
+	.containers
+	.inputs.type
+	.petTypeDP-Header {
+	position: relative;
+	color: var(--primaryTextColor);
+}
+
+.createPetListing
+	.mainContent
+	.inputsContainer
+	.containers
+	.inputs.type
+	.petTypeDropdown {
+	position: absolute;
+	width: 100%;
+	border: 1px solid rgb(200, 200, 200);
+	border-radius: 7px;
+	padding: 10px;
+	background-color: white;
+	top: 55px;
+}
+
+.createPetListing
+	.mainContent
+	.inputsContainer
+	.containers
+	.inputs.type
+	.petTypeDropdown
+	li {
+	padding: 5px 10px;
+	cursor: pointer;
+	border-radius: 7px;
+}
+
+.createPetListing
+	.mainContent
+	.inputsContainer
+	.containers
+	.inputs.type
+	.petTypeDropdown
+	li:hover {
+	background-color: rgb(221, 221, 221);
+}
+
+.createPetListing .inputsContainer .descriptionInfo {
+	display: flex;
+	flex-direction: column;
+}
+
+.createPetListing .inputsContainer .descriptionInfo textarea {
+	resize: none;
+	width: 100%;
+	height: 80px;
+}
+
+.createPetListing .inputsContainer .addressContainer textarea {
+	resize: none;
+	width: 100%;
+	height: 45px;
+}
+
+.createPetListing .inputsContainer .descriptionInfo .descContainer {
+	display: flex;
+	flex-direction: column;
+	margin: 10px 0;
+}
+
+.createPetListing .inputsContainer .descriptionInfo p {
+	font-size: 11px;
+	margin-top: -10px;
+}
+
+.createPetListing .inputsContainer .uploadImgContainer .uploadFilesBtn {
+	height: 40px;
+	padding: 7px 30px;
+	text-wrap: nowrap;
+	border: 1px solid rgb(200, 200, 200);
+	border-radius: 7px;
+	background-color: var(--primaryTextColor);
+	color: white;
+	cursor: pointer;
+}
+
+.createPetListing .inputsContainer .uploadImgContainer .uploadFilesBtn:hover {
+	background-color: rgb(85, 85, 85);
+}
+
+.createPetListing .inputsContainer .uploadImgContainer .uploadFilesBtn input {
+	display: none;
+}
+
+.createPetListing .inputsContainer .uploadImgContainer {
+	display: flex;
+	gap: 20px;
+	margin: 10px 0 30px 0;
+}
+
+.createPetListing .inputsContainer .uploadImgContainer .petImgBox {
+	border: 1px solid rgb(200, 200, 200);
+	border-radius: 7px;
+	width: 100%;
+	height: 100px;
+	display: flex;
+	overflow-x: auto;
+	overflow-y: auto;
+	justify-content: space-evenly;
+}
+
+.createPetListing
+	.inputsContainer
+	.uploadImgContainer
+	.petImgBox
+	.img-container {
+	width: 80px;
+	height: 80px;
+	border-radius: 7px;
+	overflow: hidden;
+	position: relative;
+	margin-top: 8px;
+}
+
+.createPetListing .inputsContainer .uploadImgContainer .petImgBox .closeIcon {
+	position: absolute;
+	right: 0px;
+	cursor: pointer;
+}
+
+.createPetListing
+	.inputsContainer
+	.uploadImgContainer
+	.petImgBox
+	.img-container
+	.closeIcon:hover {
+	transform: scale(1.02);
+}
+
+.createPetListing
+	.inputsContainer
+	.uploadImgContainer
+	.petImgBox
+	.img-container
+	img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	border-radius: 7px;
+	cursor: pointer;
+}
+.createPetListing
+	.inputsContainer
+	.uploadImgContainer
+	.petImgBox
+	.img-container
+	img:hover {
+	transform: scale(1.02);
+}
+
+.createPetListing .inputsContainer .addButton {
+	background-color: var(--primaryTextColor);
+	color: white;
+	padding: 5px 0;
+	height: 40px;
+	border-radius: 7px;
+	cursor: pointer;
+}
+
+.createPetListing .inputsContainer .addButton:hover {
+	background-color: rgb(85, 85, 85);
+}
+.inputs.petGender p,
+.inputs.type p {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+@media (max-width: 768px) {
+	.createPetListing .inputsContainer .uploadImgContainer {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.createPetListing .inputsContainer .uploadImgContainer .uploadFilesBtn {
+		width: 100%;
+	}
+
+	.createPetListing .inputsContainer .uploadImgContainer .petImgBox {
+		width: 100%;
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		grid-auto-rows: 1fr;
+		gap: 10px;
+		height: auto;
+		overflow: visible;
+	}
+
+	.createPetListing
+		.inputsContainer
+		.uploadImgContainer
+		.petImgBox
+		.img-container {
+		width: 100%;
+		aspect-ratio: 1 / 1;
+		position: relative;
+	}
+}
+@media (max-width: 500px) {
+	.createPetListing .mainContent .inputsContainer {
+		margin: 30px auto 0 auto;
+		padding-bottom: 50px;
+		width: 90%;
+	}
+}

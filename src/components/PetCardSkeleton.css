@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap");
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	scroll-behavior: smooth;
+	font-family: "Poppins", sans-serif;
+	transition: 0.2s;
+}
+
+:root {
+	--mainColor: #f2e6d6;
+	--primaryTextColor: #474747;
+}
+
+.petCardSkeleton {
+	width: min(40vw, 40vh);
+	height: min(55vh, 55vw);
+	padding: 3%;
+	border: 1px solid #ccc;
+	border-radius: 7px;
+	background-color: var(--mainColor);
+	display: flex;
+	flex-direction: column;
+	overflow: hidden;
+}
+
+.petCardSkeleton .petImgContainerSkeleton {
+	height: 60%;
+	background-color: #e0e0e0;
+	border-radius: 5px;
+	animation: skeletonLoading 1.5s infinite ease-in-out;
+}
+
+.petCardSkeleton .petImageSkeleton {
+	width: 100%;
+	height: 100%;
+	background-color: #ccc;
+	animation: skeletonLoading 1.5s infinite ease-in-out;
+}
+
+.petCardSkeleton .petNameSkeleton {
+	margin: 10% 0% 5% 0%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 5px;
+	color: var(--primaryTextColor);
+}
+
+.petCardSkeleton .skeletonTextName {
+	width: 60%;
+	height: 20px;
+	background-color: #e0e0e0;
+	animation: skeletonLoading 1.5s infinite ease-in-out;
+	border-radius: 5px;
+}
+
+.petCardSkeleton .petDetailsSkeleton {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.petCardSkeleton .petInfoSkeleton {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	gap: 10px;
+}
+
+.petCardSkeleton .skeletonText {
+	width: 50%;
+	height: 20px;
+	background-color: #e0e0e0;
+	animation: skeletonLoading 1.5s infinite ease-in-out;
+	border-radius: 5px;
+}
+
+@keyframes skeletonLoading {
+	0% {
+		background-color: #e0e0e0;
+	}
+	50% {
+		background-color: #f2f2f2;
+	}
+	100% {
+		background-color: #e0e0e0;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.petCardSkeleton .petCardSkeleton {
+		padding: 5% 5% 0% 5%;
+	}
+	.petCardSkeleton .skeletonText {
+		height: 12px;
+	}
+	.petCardSkeleton .petImgContainerSkeleton {
+		height: 50%;
+	}
+}
+@media screen and (max-width: 400px) {
+	.petCardSkeleton .petDetailsSkeleton {
+		gap: 5px;
+	}
+	.petCardSkeleton .skeletonText {
+		height: 10px;
+	}
+}

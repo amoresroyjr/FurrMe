@@ -1,0 +1,361 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap");
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	scroll-behavior: smooth;
+	font-family: "Poppins", sans-serif;
+	transition: 0.2s;
+}
+
+:root {
+	--mainColor: #f2e6d6;
+	--primaryTextColor: #474747;
+}
+
+.adminDashboard {
+	display: flex;
+	height: 100vh;
+}
+
+.adminDashboard .sidebarComp {
+	min-width: 20%;
+	height: 100%;
+}
+
+.adminDashboard .mainContent {
+	flex: 1;
+	overflow-x: hidden;
+}
+
+.adminDashboard .mainContent .header {
+	height: 8%;
+	display: flex;
+	background-color: rgb(250, 250, 250);
+	border-bottom: 1px solid rgb(211, 211, 211);
+	align-items: center;
+	justify-content: space-between;
+	padding: 0 40px;
+}
+.adminDashboard .mainContent .header h2 {
+	color: var(--primaryTextColor);
+	font-size: 25px;
+	text-wrap: nowrap;
+	width: 15%;
+}
+
+.adminDashboard .mainContent .header .searchBar.highlighted {
+	border-color: rgb(145, 145, 145);
+	box-shadow: 0 0 5px rgba(211, 211, 211, 0.5);
+}
+
+.adminDashboard .mainContent .header .searchIcon {
+	padding: 0 2px;
+	height: 20px;
+	width: 20px;
+	cursor: pointer;
+}
+
+.adminDashboard .mainContent .header input {
+	background-color: none;
+	border: none;
+	width: 100%;
+	font-size: 1vw;
+}
+
+.adminDashboard .mainContent .header input:focus {
+	outline: none;
+}
+
+.adminDashboard .mainContent .tableFilters {
+	display: flex;
+	align-items: center;
+	gap: 15px;
+}
+
+.adminDashboard .mainContent .tableFilters p {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: 5px 10px;
+	cursor: pointer;
+	border: 1px solid rgb(211, 211, 211);
+	border-radius: 7px;
+	font-size: 1vw;
+	position: relative;
+	width: 10vw;
+}
+
+.adminDashboard .mainContent .tableFilters .dropdown {
+	position: absolute;
+	background-color: white;
+	border: 1px solid rgb(211, 211, 211);
+	border-radius: 7px;
+	width: 10vw;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	z-index: 1;
+}
+
+.adminDashboard .mainContent .tableFilters .dropdown li {
+	padding: 10px;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+.adminDashboard .mainContent .tableFilters .dropdown li:hover {
+	background-color: rgba(0, 0, 0, 0.05);
+}
+
+.adminDashboard .mainContent .header .searchBar {
+	width: 30%;
+	border: 1px solid rgb(211, 211, 211);
+	background-color: white;
+	border-radius: 7px;
+	display: flex;
+	align-items: center;
+	padding: 5px 10px;
+	transition:
+		border-color 0.3s,
+		box-shadow 0.3s;
+}
+
+.adminDashboard .mainContent .tableContainer {
+	width: 90%;
+	min-height: 552px;
+	margin: auto;
+	background-color: rgb(250, 250, 250);
+	border-radius: 8px;
+	box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+	font-size: 14px;
+	margin-top: 5vh;
+	position: relative;
+}
+
+.adminDashboard .mainContent .tableContainer table {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	border-collapse: collapse;
+	border: 1px solid #ddd;
+	table-layout: fixed;
+}
+
+.adminDashboard .mainContent .tableContainer th,
+.adminDashboard .mainContent .tableContainer td {
+	padding: 12px 15px;
+	border: none;
+	border-bottom: 1px solid #ddd;
+	text-align: left;
+	height: 50px;
+	text-overflow: ellipsis;
+	font-size: 14px;
+}
+
+.adminDashboard .mainContent .tableContainer th {
+	background-color: #f2f2f2;
+	font-weight: 600;
+}
+
+.adminDashboard .mainContent .tableContainer tr {
+	cursor: pointer;
+}
+
+.adminDashboard .mainContent .tableContainer tr:nth-child(even) {
+	background-color: #f9f9f9;
+}
+
+.adminDashboard .mainContent .tableContainer tr:hover {
+	background-color: rgb(204, 204, 204);
+}
+
+.adminDashboard .mainContent .tableContainer td {
+	display: table-cell;
+	vertical-align: middle;
+	position: relative;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.adminDashboard .mainContent .tableContainer td .actionsIcon {
+	height: 25px;
+	width: 25px;
+	cursor: pointer;
+	position: absolute;
+	top: 50%;
+	right: 10px;
+	padding: 2px;
+	transform: translateY(-50%);
+	border-radius: 5px;
+}
+
+.adminDashboard .mainContent .tableContainer td .actionsIcon:hover {
+	background-color: rgb(228, 228, 228);
+}
+
+.adminDashboard .mainContent .tableContainer .actionsDropdown {
+	position: absolute;
+	width: 100px;
+	height: 50px;
+}
+
+.adminDashboard .mainContent .tableContainer .icon {
+	color: rgb(158, 158, 158);
+	margin-right: 10px;
+}
+
+.adminDashboard .mainContent .tableNav {
+	width: 100%;
+	font-size: 14px;
+	padding: 15px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	gap: 20px;
+}
+
+.adminDashboard .mainContent .tableNav .pageNav {
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+	padding: 5px 10px;
+	border-radius: 7px;
+}
+
+.adminDashboard .mainContent .tableNav .pageNav:hover {
+	background-color: rgb(211, 211, 211);
+}
+
+.adminDashboard .mainContent .tableNav .navIcon {
+	height: 25px;
+	width: 25px;
+}
+
+.adminDashboard .mainContent .buttonContainer {
+	width: 100%;
+	position: relative;
+}
+
+.adminDashboard .mainContent button {
+	border: 1px solid black;
+	background-color: #474747;
+	color: white;
+	border-radius: 7px;
+	padding: 10px 40px;
+	cursor: pointer;
+	position: absolute;
+	right: 10%;
+}
+
+.adminDashboard .mainContent button:hover {
+	background-color: rgb(92, 92, 92);
+}
+
+.notificationIcon {
+	height: 50%;
+	width: auto;
+	padding: 4px;
+	background-color: white;
+	border: 1px solid rgb(211, 211, 211);
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.notificationIcon:hover {
+	background-color: rgb(238, 238, 238);
+}
+
+@media screen and (max-width: 768px) {
+	.adminDashboard .mainContent .header h2 {
+		display: none;
+	}
+	.adminDashboard .mainContent .tableFilters {
+		gap: 10px;
+		justify-content: space-around;
+	}
+	.adminDashboard .mainContent .tableFilters .dropdown li {
+		font-size: 1vw;
+	}
+	.adminDashboard .mainContent .header .tableFilters p {
+		font-size: 1.5vw;
+		width: 100%;
+	}
+	.adminDashboard .mainContent .header .searchBar {
+		width: 50%;
+	}
+	.adminDashboard .mainContent .header input {
+		font-size: 1.5vw;
+	}
+	.adminDashboard .mainContent .header {
+		padding: 0 25px;
+		justify-content: space-between;
+		gap: 0px;
+	}
+	.adminDashboard .mainContent .tableContainer th,
+	.adminDashboard .mainContent .tableContainer td {
+		font-size: 2vw;
+	}
+}
+@media screen and (max-width: 600px) {
+	.adminDashboard .mainContent .header .searchBar {
+		width: 40%;
+	}
+
+	.adminDashboard .mainContent .header .tableFilters p {
+		font-size: 1.8vw;
+	}
+	.adminDashboard .mainContent .centeredTitle {
+		font-size: 16px;
+		margin: 5% 5%;
+		color: var(--primaryTextColor);
+		text-align: center;
+	}
+	.adminDashboard .mainContent .tableContainer {
+		margin-top: 1vh;
+	}
+}
+
+@media screen and (min-width: 600px) {
+	.adminDashboard .mainContent .centeredTitle {
+		display: none;
+	}
+}
+.adminDashboard .skeleton-row td {
+	padding: 10px;
+}
+
+.adminDashboard .skeleton {
+	background-color: #e0e0e0;
+	border-radius: 4px;
+	animation: pulse 1.5s infinite;
+}
+
+.adminDashboard .skeleton-icon {
+	width: 30px;
+	height: 30px;
+}
+
+.adminDashboard .skeleton-text {
+	height: 14px;
+	width: 70%;
+}
+
+@keyframes pulse {
+	0% {
+		opacity: 1;
+	}
+	50% {
+		opacity: 0.4;
+	}
+	100% {
+		opacity: 1;
+	}
+}

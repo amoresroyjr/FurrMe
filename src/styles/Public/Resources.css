@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap");
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	scroll-behavior: smooth;
+	font-family: "Poppins", sans-serif;
+	transition: 0.2s;
+}
+
+:root {
+	--mainColor: #f2e6d6;
+	--primaryTextColor: #474747;
+	--hoverColor: #d4bb9a;
+}
+
+.resourcesPage {
+	padding-top: 10vh;
+}
+
+.resourcesSection {
+	padding: 2% 7% 0;
+}
+
+.sectionHeader {
+	font-size: 50px;
+}
+
+.sectionDescription {
+	font-size: 15px;
+}
+
+.sectionCards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-top: 30px 10%;
+	margin-top: 30px;
+	gap: 30px;
+	width: 100%;
+}
+
+.cardComp {
+	max-width: 330px;
+	border: 2px solid rgb(218, 218, 218);
+	border-radius: 7px;
+	height: 350px;
+	padding: 20px;
+	display: flex;
+	flex-direction: column;
+	position: relative;
+}
+
+.cardHeader {
+	font-size: 23px;
+	font-weight: 600;
+}
+
+.cardHeaderTag {
+	font-size: 14px;
+	color: rgb(139, 139, 139);
+	margin-bottom: 30px;
+}
+
+.cardDescription {
+	font-size: 14px;
+}
+
+.resourcesPage .readMore {
+	font-size: 14px;
+	position: absolute;
+	bottom: 20px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	gap: 5px;
+}
+
+.resourcesPage .readMore:hover {
+	text-decoration: underline;
+}
+
+.petAdoptionProcess .header {
+	font-size: 50px;
+	margin: 0 10%;
+}
+
+.petAdoptionProcess .headerDescription {
+	margin: 0 10%;
+}
+
+.petAdoptionProcess {
+	margin: 50px 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.petAdoptionProcess .cardsList {
+	width: 100%;
+	padding: 0 10%;
+	margin-top: 80px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	gap: 30px;
+}
+
+.petAdoptionProcess .cards {
+	display: flex;
+	flex-direction: column;
+	max-width: 380px;
+	height: 250px;
+	border: 2px solid rgb(218, 218, 218);
+	border-radius: 7px;
+	padding: 20px;
+}
+
+.petAdoptionProcess .cards .cardIcon {
+	height: 40px;
+	width: auto;
+	color: rgb(112, 112, 112);
+	align-self: flex-start;
+	margin-bottom: 15px;
+}
+
+.petAdoptionProcess .cards h3 {
+	font-size: 20px;
+}
+
+.petAdoptionProcess .cards p {
+	margin-top: 10px;
+	font-weight: 500;
+	color: rgb(112, 112, 112);
+}

@@ -1,0 +1,68 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap");
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	scroll-behavior: smooth;
+	font-family: "Poppins", sans-serif;
+	transition: 0.2s;
+}
+
+:root {
+	--mainColor: #f2e6d6;
+	--primaryTextColor: #474747;
+	--hoverColor: #d4bb9a;
+}
+
+.dogsPage {
+	padding-top: 80px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.dp-bannerContainer {
+	margin: 50px 0 40px 0;
+	width: 80%;
+	height: 55vh;
+}
+
+.dp-Banner {
+	background-image: url("../../assets/dogsPage.jpg");
+	min-width: 100%;
+	min-height: 100%;
+	background-position: center;
+	background-size: cover;
+}
+
+.searchBarContainer {
+	display: flex;
+	height: 30px;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin: 0 20px;
+	margin: 20px 30px;
+}
+
+.searchBarContainer .searchBar {
+	padding: 8px 10px;
+	border-radius: 5px;
+	border: 1px solid gray;
+	width: 400px;
+	font-size: 12;
+}
+
+.searchBarContainer .searchIcon {
+	position: absolute;
+	right: 10px;
+	cursor: pointer;
+}

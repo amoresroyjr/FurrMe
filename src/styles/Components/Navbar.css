@@ -1,0 +1,254 @@
+:root {
+	--mainColor: #f2e6d6;
+	--primaryTextColor: #474747;
+	--hoverColor: #d4bb9a;
+}
+
+.navbar {
+	background-color: var(--mainColor);
+	width: 100%;
+	height: 10vh;
+	padding: 0 10vw;
+	position: fixed;
+	z-index: 1000;
+	box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+	display: flex;
+	justify-content: space-between;
+	gap: 2vw;
+}
+
+.navbar .logo {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	width: 20%;
+	height: 100%;
+}
+
+.navbar .logo img {
+	width: auto;
+	height: 8vh;
+	color: var(--primaryTextColor);
+}
+
+.navbar .logo a {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.navbar .logo h2 {
+	color: var(--primaryTextColor);
+	font-size: min(3.5vw, 10vh);
+}
+
+.navbar .navList {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 100%;
+	height: 100%;
+	gap: 2vw;
+}
+
+.navbar .navList .navItem {
+	text-align: center;
+	position: relative;
+	width: 25%;
+}
+
+.navbar .navList .navItem p {
+	border-radius: 7px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: var(--primaryTextColor);
+	font-size: min(2vw, 2.5vh);
+	min-width: 7vh;
+}
+
+.navbar .navList .navItem p:hover {
+	background-color: var(--hoverColor);
+}
+
+.navbar .navList .navItem .dropdown {
+	position: absolute;
+	background-color: var(--mainColor);
+	border-radius: 7px;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 15px 20px;
+	border: 1px solid var(--hoverColor);
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+	font-size: 16px;
+	left: 50%;
+	transform: translateX(-50%);
+	box-sizing: border-box;
+	z-index: 1000;
+	overflow-x: visible;
+	white-space: nowrap;
+}
+
+.navbar .navList .navItem .dropdown.resources a {
+	font-size: 1.2vw;
+}
+
+.navbar .navList .navItem .dropdown a {
+	cursor: pointer;
+	border-radius: 7px;
+	padding: 5px 25px 5px 5px;
+	text-wrap: nowrap;
+	gap: 10px;
+	display: flex;
+	align-items: center;
+	font-size: 1.2vw;
+	width: 100%;
+	color: var(--primaryTextColor);
+}
+
+.navbar .navList .navItem .dropdown a .rightIcon {
+	height: auto;
+	width: auto;
+	position: absolute;
+}
+
+.navbar .navList .navItem .dropdown .rightIcon {
+	height: 15px;
+	width: 15px;
+	position: absolute;
+	right: 8px;
+	margin-top: 1px;
+}
+
+.navbar .loginBtn-accountIcon {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.navbar .loginBtn-accountIcon button {
+	background-color: var(--primaryTextColor);
+	color: white;
+	padding: 1.1vh 3.4vw;
+	font-size: min(2vw, 2vh);
+	border-radius: 7px;
+	border: none;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+	cursor: pointer;
+	transition: all 0.3s ease;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	height: 55%;
+}
+
+.navbar .loginBtn-accountIcon button:hover {
+	background-color: rgb(85, 85, 85);
+}
+
+.navbar .DP-Icon {
+	width: min(7vw, 7vh);
+	height: min(7vw, 7vh);
+	border-radius: 50%;
+	overflow: hidden;
+	box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+	cursor: pointer;
+	border: px solid var(--primaryTextColor);
+	margin-left: auto;
+	gap: 2vw;
+}
+
+.navbar .DP-Icon img {
+	width: 100%;
+	height: 100%;
+	border-radius: 50%;
+	object-fit: cover;
+}
+
+.navbar .loginBtn-accountIcon .userDropdown {
+	background-color: var(--mainColor);
+	border-radius: 7px;
+	border: 1px solid var(--hoverColor);
+	box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.3);
+	font-size: 16px;
+	padding: 15px 20px;
+	position: absolute;
+	transform: translateY(70%);
+	box-sizing: border-box;
+	z-index: 1000;
+	overflow-x: visible;
+	white-space: nowrap;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	gap: 0.3vw;
+}
+
+.navbar .loginBtn-accountIcon .userDropdown a {
+	padding: 5px 5px;
+	cursor: pointer;
+	border-radius: 7px;
+	display: flex;
+	justify-content: space-between;
+	text-wrap: nowrap;
+	font-size: 1.2vw;
+}
+
+.navbar .loginBtn-accountIcon .userDropdown a:hover {
+	background-color: var(--hoverColor);
+}
+
+.navbar .loginBtn-accountIcon .userDropdown .dropdownIcon {
+	height: auto;
+	width: auto;
+}
+.navbar .loginBtn-accountIcon .userDropdown .colorDrop .rightIcon-UDP {
+	height: auto;
+	width: auto;
+}
+
+.navbar .colorDrop {
+	color: var(--primaryTextColor);
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.burger {
+	display: flex;
+	width: 65%;
+}
+@media screen and (max-width: 600px) {
+	.navbar .logo h2 {
+		display: none;
+	}
+	.navbar {
+		padding: 0 5vw;
+		gap: 10px;
+		justify-content: space-around;
+	}
+
+	.navbar .navList {
+		gap: 1vw;
+		margin-left: -20px;
+	}
+
+	.navbar .navList .navItem .dropdown a {
+		font-size: 9px;
+	}
+	.navbar .navList .navItem .dropdown.resources a {
+		font-size: 9px;
+	}
+
+	.navbar .loginBtn-accountIcon .userDropdown a {
+		font-size: 9px;
+	}
+}
+@media screen and (max-width: 450px) {
+	.navbar .loginBtn-accountIcon .userDropdown .colorDrop .logo {
+		display: none;
+	}
+}

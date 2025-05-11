@@ -1,0 +1,68 @@
+.modal-content {
+	background: white;
+	padding: 20px;
+	border-radius: 8px;
+	box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.2);
+	max-width: 500px;
+	width: 90%;
+	text-align: center;
+	position: fixed;
+	top: 0%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	transition: transform 0.5s ease;
+	background-color: #f2e6d6;
+	z-index: 1000000;
+}
+
+.modal-content.slide-in {
+	transform: translate(-50%, 50%);
+}
+
+.modal-content.slide-out {
+	transform: translate(-50%, -1200%);
+}
+
+.modal-body {
+	color: #474747;
+}
+.modal-body a {
+	color: black;
+	text-decoration: underline;
+}
+
+.close-button {
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	background: none;
+	border: none;
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.countdown-timer {
+	font-size: 14px;
+	margin-top: 15px;
+	font-weight: bold;
+	color: #474747;
+}
+
+@media (max-width: 600px) {
+	.modal-content {
+		max-width: 90%;
+		padding: 15px;
+	}
+
+	.close-button {
+		font-size: 20px;
+	}
+
+	h2 {
+		font-size: 20px;
+	}
+
+	.countdown-timer {
+		font-size: 14px;
+	}
+}

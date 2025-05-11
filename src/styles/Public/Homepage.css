@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap");
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	scroll-behavior: smooth;
+	font-family: "Poppins", sans-serif;
+	transition: 0.2s;
+}
+
+:root {
+	--mainColor: #f2e6d6;
+	--primaryTextColor: #474747;
+}
+
+.homepage-bg {
+	background-image: url("../../assets/homepageBG.jpg");
+	min-height: 100vh;
+	background-size: cover;
+	background-position: center;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-bottom: 100px;
+	overflow: hidden;
+}
+
+.homepage-logo {
+	color: var(--mainColor);
+	text-align: center;
+	font-size: 4.375rem;
+}
+
+.homepage-tagline {
+	font-size: 0.813rem;
+	color: var(--mainColor);
+	margin-top: -15px;
+	font-style: italic;
+	font-weight: 400;
+	width: 80%;
+	text-align: center;
+}
+
+.homepage-container p {
+	margin-top: 50px;
+	text-align: center;
+	width: 80%;
+	/* padding: 20px 250px 0 250px; */
+	color: antiquewhite;
+}
+
+.homepage-buttons {
+	display: flex;
+	gap: 40px;
+	margin-top: 30px;
+}
+
+.homepage-container button {
+	background-color: transparent;
+	width: 130px;
+	height: 40px;
+	border: 2px solid var(--mainColor);
+	border-radius: 5px;
+	cursor: pointer;
+	font-size: 0.875rem;
+	font-weight: 500;
+	color: var(--mainColor);
+}
+
+.homepage-container p:hover {
+	transform: scale(1.05);
+	color: white;
+}
+
+.homepage-container button:hover {
+	transform: scale(1.05);
+	color: white;
+	border: 2px solid white;
+}

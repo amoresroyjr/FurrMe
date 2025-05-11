@@ -1,0 +1,267 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;500;600&display=swap");
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-decoration: none;
+	scroll-behavior: smooth;
+	font-family: "Poppins", sans-serif;
+	transition: 0.2s;
+}
+
+:root {
+	--mainColor: #f2e6d6;
+	--primaryTextColor: #474747;
+	--hoverColor: #d4bb9a;
+}
+
+.allPets {
+	padding-top: 10vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.allPetsHeader {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+}
+
+.headerImgContainer {
+	width: 100%;
+	height: 55vh;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.bannerImg {
+	background-image: url("../../assets/allPetsBanner.jpg");
+	width: 80%;
+	height: 80%;
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.bannerImg p {
+	text-align: center;
+	color: #fff;
+	font-weight: 800;
+	font-size: min(2.5vh, 5vw);
+	padding: 0 20px;
+	max-width: 90%;
+}
+
+.headerTitle {
+	display: flex;
+	flex-direction: column;
+	width: 70%;
+	justify-items: center;
+	align-items: center;
+	cursor: default;
+	padding: 20px 0;
+}
+
+.headerTitle h1 {
+	font-size: 60px;
+	margin: 10px 0;
+	text-align: center;
+}
+
+.allPetsHeader hr {
+	margin-top: -10px;
+	margin-bottom: 30px;
+	border-radius: 10px;
+	height: 4px;
+	width: 40%;
+	background: var(--primaryTextColor);
+}
+
+.searchBarContainer {
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 0 20px;
+}
+
+.searchWrapper {
+	position: relative;
+	width: 100%;
+	max-width: 400px;
+}
+
+.searchBarContainer .searchBar {
+	width: 100%;
+	padding: 8px 35px 8px 10px; /* leave space on the right for the icon */
+	border-radius: 5px;
+	border: 1px solid gray;
+	font-size: 14px;
+}
+
+.searchBarContainer .searchIcon {
+	position: absolute;
+	right: 10px;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #888;
+	pointer-events: none;
+}
+
+.filter-dropdowns {
+	width: 80%;
+	display: flex;
+	justify-content: space-evenly;
+	gap: 20px;
+	flex-wrap: wrap;
+	margin-bottom: 5%;
+}
+
+.petFilter {
+	width: 200px;
+	position: relative;
+}
+
+.filterTitle {
+	background: var(--mainColor);
+	color: var(--primaryTextColor);
+	padding: 7px 15px;
+	justify-content: space-between;
+	align-items: center;
+	display: flex;
+	border: 1px solid var(--primaryTextColor);
+	border-radius: 10px;
+	cursor: pointer;
+}
+
+.filterTitle:hover {
+	background: var(--hoverColor);
+}
+
+.filterMenu {
+	padding: 20px 10px;
+	background: var(--mainColor);
+	border: 1px solid var(--primaryTextColor);
+	border-radius: 10px;
+	color: var(--primaryTextColor);
+	width: 100%;
+	position: absolute;
+	top: 45px;
+	opacity: 0;
+	visibility: hidden;
+	transition: 0.2s;
+}
+
+.filterMenu p {
+	font-size: min(4vw, 3vh);
+}
+
+.filterMenu.active {
+	opacity: 1;
+	visibility: visible;
+	z-index: 999;
+}
+
+.filterMenu li {
+	padding: 5px 15px;
+	cursor: pointer;
+	border-radius: 5px;
+}
+
+.filterMenu li:hover {
+	background: var(--hoverColor);
+}
+
+.petsContainer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 40px;
+	margin-bottom: 60px;
+}
+
+.filterMenu .clear-option {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: red;
+	cursor: pointer;
+	padding: 8px 0;
+}
+
+.filterMenu .clear-option i {
+	font-size: 16px;
+}
+
+@media screen and (max-width: 960px) {
+	.allPetsHeader {
+		width: 100%;
+		flex-direction: column;
+	}
+
+	.headerImgContainer {
+		padding-top: 5vh;
+		height: 40vh;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.bannerImg {
+		align-self: center;
+		width: 80%;
+		height: 100%;
+	}
+
+	.bannerImg p {
+		font-size: min(2.5vh, 3vw);
+		max-width: 100%;
+	}
+	.headerTitle {
+		display: flex;
+		justify-content: center;
+	}
+
+	.headerTitle h1 {
+		font-size: 30px;
+	}
+
+	.searchBarContainer {
+		width: 80%;
+	}
+
+	.filter-dropdowns {
+		display: flex;
+		flex-direction: row;
+	}
+
+	.petFilter {
+		width: 45%;
+	}
+}
+@media screen and (max-width: 768px) {
+	.petsContainer h1 {
+		font-size: 24px;
+		text-align: center;
+	}
+}
+@media screen and (max-width: 500px) {
+	.searchBarContainer {
+		width: 100%;
+	}
+}
