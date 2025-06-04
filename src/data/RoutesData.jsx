@@ -24,6 +24,7 @@ export const PublicRoutes = [
 	{ path: "/forgot", element: <ForgotPassword /> },
 	{ path: "/resources", element: <Resources /> },
 	{ path: "/terms", element: <Terms /> },
+	{ path: "/pets/:id", element: <PetPreview /> },
 	{ path: "/FAQs", element: <FAQS /> },
 ];
 
@@ -35,7 +36,7 @@ export const RoutesData = [
 	{ path: "/admin/pets/evaluate/:name", element: <PetEvaluation /> },
 
 	{ path: "/profile", element: <Profile /> },
-	{ path: "/pets/:id", element: <PetPreview /> },
+
 	{ path: "/pets/:id/adopt", element: <AdoptPage /> },
 	{ path: "/community", element: <Community /> },
 	{ path: "/pets", element: <AllPets /> },
