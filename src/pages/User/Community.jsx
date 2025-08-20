@@ -65,7 +65,7 @@ function Community() {
 			.then((res) => {
 				if (res.data[0]) {
 					setPostList(res.data);
-					setLoadError(false); // reset if posts are fetched
+					setLoadError(false);
 				} else {
 					setPostList([]);
 				}
@@ -75,7 +75,7 @@ function Community() {
 				setLoadError(true);
 			})
 			.finally(() => {
-				clearTimeout(timeout); // clear timeout if fetch finishes
+				clearTimeout(timeout);
 			});
 
 		return () => clearTimeout(timeout);

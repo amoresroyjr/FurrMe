@@ -11,12 +11,10 @@ const RequireAuth = ({ children }) => {
 
 	const isAdminRoute = location.pathname.startsWith("/admin");
 
-	// Admin trying to access User routes
 	if (user.user.role === "Admin" && !isAdminRoute) {
 		return <Navigate to="/admin/pets" replace />;
 	}
 
-	// User trying to access Admin routes
 	if (user.user.role !== "Admin" && isAdminRoute) {
 		return <Navigate to="/pets" replace />;
 	}

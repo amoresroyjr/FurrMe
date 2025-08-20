@@ -167,8 +167,6 @@
 	background-color: rgb(218, 218, 218);
 }
 
-/* textareas */
-
 .adminPetPreview .mainContent .petInfoCont .textAreaConts {
 	width: 100%;
 	display: flex;
@@ -206,8 +204,6 @@
 .adminPetPreview .mainContent .petInfoCont .saveChanges:hover {
 	background-color: rgb(82, 82, 82);
 }
-
-/* petImagesContainer */
 
 .adminPetPreview .mainContent .petImagesContainer {
 	margin-bottom: auto;

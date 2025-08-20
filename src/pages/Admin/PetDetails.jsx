@@ -116,10 +116,10 @@ function PetDetails() {
 		return new Promise((resolve, reject) => {
 			const reader = new FileReader();
 			reader.onloadend = () => {
-				resolve(reader.result); // This will be the Base64 string
+				resolve(reader.result);
 			};
 			reader.onerror = reject;
-			reader.readAsDataURL(blob); // Reads the Blob as a Data URL (base64)
+			reader.readAsDataURL(blob);
 		}).then((res) => base64s.push(res));
 	}
 
@@ -127,13 +127,12 @@ function PetDetails() {
 		const index2 = images.findIndex((item) => item.includes("blob"));
 
 		if (index2 !== -1) {
-			images.splice(index2, 1); // Remove the item at the found index
+			images.splice(index2, 1);
 		}
 	};
 
 	const handleSubmit = (e) => {
 		if (!images[0]) {
-			// Remove the uploaded image
 			setIsModalOpen(!isModalOpen);
 			setmodalContents({
 				title: "Image cannot be empty!",
@@ -155,7 +154,7 @@ function PetDetails() {
 				}
 
 				if (images.some((item) => item.includes("blob"))) {
-					removeBlob(); // remove blob links from the images list
+					removeBlob();
 				}
 				base64s.splice(0, 1);
 				if (!base64s[0]) {

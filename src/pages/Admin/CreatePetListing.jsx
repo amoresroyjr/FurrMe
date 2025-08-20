@@ -89,10 +89,9 @@ function CreatePetListing() {
 		};
 		setErrors(newErrors);
 
-		// If any input is invalid, trigger the shake animation
 		if (Object.values(newErrors).includes(true)) {
 			setShaking(true);
-			setTimeout(() => setShaking(false), 500); // Remove the shake class after 500ms
+			setTimeout(() => setShaking(false), 500);
 		} else return true;
 	};
 
@@ -178,16 +177,9 @@ function CreatePetListing() {
 		});
 		setErrors({
 			...errors,
-			[name]: false, // Reset error state on change
+			[name]: false,
 		});
 	};
-
-	/*const handleCharacterLimit = (event, setter, maxChars) => {
-        if (event.target.value.length > maxChars) {
-            event.target.value = event.target.value.slice(0, maxChars);
-        }
-        setter(event.target.value);
-    };*/
 
 	const create = (uploadedImages) => {
 		axios
@@ -255,7 +247,7 @@ function CreatePetListing() {
 			}
 
 			setUploadingText("Adding Pet Listing...");
-			create(uploadedImages); // Call with complete list
+			create(uploadedImages);
 		} catch (error) {
 			console.error("Upload Error:", error);
 			setUploading(false);
@@ -291,10 +283,10 @@ function CreatePetListing() {
 		return new Promise((resolve, reject) => {
 			const reader = new FileReader();
 			reader.onloadend = () => {
-				resolve(reader.result); // This will be the Base64 string
+				resolve(reader.result);
 			};
 			reader.onerror = reject;
-			reader.readAsDataURL(blob); // Reads the Blob as a Data URL (base64)
+			reader.readAsDataURL(blob);
 		}).then((res) => base64s.push(res));
 	}
 
@@ -302,7 +294,7 @@ function CreatePetListing() {
 		const index2 = images.findIndex((item) => item.includes("blob"));
 
 		if (index2 !== -1) {
-			images.splice(index2, 1); // Remove the item at the found index
+			images.splice(index2, 1);
 		}
 	};
 

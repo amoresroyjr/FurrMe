@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import "../styles/Components/RedirectModal.css"; // Assuming you renamed the CSS to match your needs
+import "../styles/Components/RedirectModal.css";
 
 const ShowModal = ({ isOpen, onClose, title, children }) => {
 	useEffect(() => {

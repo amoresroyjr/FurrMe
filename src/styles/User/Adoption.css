@@ -148,9 +148,9 @@ textarea {
 
 .btnValidID {
 	height: 100%;
-	white-space: nowrap; /* Prevent text from wrapping */
-	overflow: hidden; /* Hide overflowed text */
-	text-overflow: ellipsis; /* Add ellipsis (...) when text is too long */
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
 }
 
 .adoptionVerification .btnValidID {
@@ -322,7 +322,6 @@ input[type="number"]::-webkit-outer-spin-button {
 	margin: 0;
 }
 
-/* Hide number input arrows in Firefox */
 input[type="number"] {
 	-moz-appearance: textfield;
 }

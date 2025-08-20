@@ -80,8 +80,6 @@ function AdminDashboard() {
 		setSearchInput("");
 	};
 
-	//Page Navigation
-
 	const handlePreviousPage = () => {
 		setCurrentPage((prevPage) => Math.max(prevPage - 1, 1));
 	};
@@ -92,13 +90,11 @@ function AdminDashboard() {
 		);
 	};
 
-	//Search Filtering and Dropdown Reset
-
 	const handleSearchInputChange = (event) => {
-		setSearchInput(event.target.value); // Update search input state
-		setCurrentPage(1); // Reset currentPage to 1 when search input changes
-		setSelectedOption("All Pets"); // Reset dropdown to default when search input changes
-		setSelectedStatus("Status"); // Reset status dropdown to default when search input changes
+		setSearchInput(event.target.value);
+		setCurrentPage(1);
+		setSelectedOption("All Pets");
+		setSelectedStatus("Status");
 	};
 
 	const filteredPetList = petList.filter((pet) => {
@@ -115,11 +111,9 @@ function AdminDashboard() {
 			)
 		: filteredPetList;
 
-	//Page Number
 	const startIndex = (currentPage - 1) * rowsPerPage;
 	const currentPets = searchedPets.slice(startIndex, startIndex + rowsPerPage);
 
-	//Dropdown Effect
 	useEffect(() => {
 		const handleClickOutside = (event) => {
 			if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {

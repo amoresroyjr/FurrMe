@@ -8,11 +8,11 @@ import CONFIG from "../../data/config";
 
 function CatsPage() {
 	const [ageClick, setAgeClick] = useState(false);
-	const [colorClick, setColorClick] = useState(false); // State for color filter
+	const [colorClick, setColorClick] = useState(false);
 	const [ageCaretDirection, setAgeCaretDirection] = useState("down");
-	const [colorCaretDirection, setColorCaretDirection] = useState("down"); // State for color caret direction
+	const [colorCaretDirection, setColorCaretDirection] = useState("down");
 	const ageRef = useRef(null);
-	const colorRef = useRef(null); // Ref for color dropdown
+	const colorRef = useRef(null);
 	const [catList, setList] = useState([]);
 	const [filteredPets, setFilteredPets] = useState([]);
 	const [searchTerm, setSearchTerm] = useState("");
@@ -27,13 +27,13 @@ function CatsPage() {
 			if (
 				ageRef.current &&
 				!ageRef.current.contains(event.target) &&
-				colorRef.current && // Check if colorRef exists
+				colorRef.current &&
 				!colorRef.current.contains(event.target)
 			) {
 				setAgeClick(false);
 				setAgeCaretDirection("down");
-				setColorClick(false); // Set colorClick to false
-				setColorCaretDirection("down"); // Reset color caret direction
+				setColorClick(false);
+				setColorCaretDirection("down");
 			}
 		};
 

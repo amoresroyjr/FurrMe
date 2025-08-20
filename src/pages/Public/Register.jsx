@@ -21,7 +21,7 @@ function Register() {
 		email: "",
 		cpass: "",
 		image:
-			"https://res.cloudinary.com/dmquudoki/image/upload/v1716289449/fmzaxpxgzginvhs4ljcn.jpg", //default image for new accounts
+			"https://res.cloudinary.com/dmquudoki/image/upload/v1716289449/fmzaxpxgzginvhs4ljcn.jpg",
 		role: "User",
 	});
 	const [errors, setErrors] = useState({});
@@ -118,7 +118,7 @@ function Register() {
 	const handleSubmit = (e) => {
 		e.preventDefault();
 		if (validateForm()) {
-			setLoading(true); // Set loading to true when the registration starts
+			setLoading(true);
 
 			axios
 				.post(`${CONFIG.BASE_URL}/register`, { formData, password })
@@ -148,8 +148,6 @@ function Register() {
 	};
 
 	const [type, setType] = useState("password");
-
-	// validated states
 	const [lowerValidated, setLowerValidated] = useState(false);
 	const [upperValidated, setUpperValidated] = useState(false);
 	const [numberValidated, setNumberValidated] = useState(false);

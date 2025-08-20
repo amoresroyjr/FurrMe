@@ -7,8 +7,6 @@ import { FaAngleLeft, FaAngleRight } from "react-icons/fa6";
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import { useSelector } from "react-redux";
-//import LoadingOverlay from "../../components/LoadingOverlay";
-//import catLoading2 from "../../assets/catLoading2.gif";
 import { IoNotificationsOutline } from "react-icons/io5";
 import CONFIG from "../../data/config";
 
@@ -70,14 +68,14 @@ function AdoptionRequests() {
 		setSelectedPet(petType);
 		setIsDropdownOpen(false);
 		setCurrentPage(1);
-		setSearchInput(""); // Reset the search input when dropdown is used
+		setSearchInput("");
 	};
 
 	const handleStatusOptionClick = (status) => {
 		setSelectedStatus(status);
 		setIsStatusDropdownOpen(false);
 		setCurrentPage(1);
-		setSearchInput(""); // Reset the search input when dropdown is used
+		setSearchInput("");
 	};
 
 	const filteredRequests = adminPetRequests.filter((request) => {
@@ -103,7 +101,7 @@ function AdoptionRequests() {
 			setIsMobileView(window.innerWidth < 450);
 		};
 
-		handleResize(); // Initial check
+		handleResize();
 		window.addEventListener("resize", handleResize);
 
 		return () => {

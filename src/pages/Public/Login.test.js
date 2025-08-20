@@ -8,7 +8,6 @@ import configureStore from "redux-mock-store";
 import axios from "axios";
 import MockAdapter from "axios-mock-adapter";
 
-// Create a mock store for Redux
 const mockStore = configureStore([]);
 const store = mockStore({
 	users: {
@@ -21,12 +20,10 @@ describe("Login Component", () => {
 	let mockAxios;
 
 	beforeEach(() => {
-		// Set up axios mock adapter
 		mockAxios = new MockAdapter(axios);
 	});
 
 	afterEach(() => {
-		// Reset axios mock adapter
 		mockAxios.reset();
 	});
 
@@ -52,8 +49,6 @@ describe("Login Component", () => {
 
 		const loginButton = screen.getByText(/Login/);
 		userEvent.click(loginButton);
-
-		// Check for validation error messages
 		expect(await screen.findByText(/Email is required/)).toBeInTheDocument();
 		expect(await screen.findByText(/Password is required/)).toBeInTheDocument();
 	});
@@ -74,7 +69,6 @@ describe("Login Component", () => {
 		userEvent.type(emailInput, "test@example.com");
 		userEvent.type(passwordInput, "password123");
 
-		// Mocking the axios response for successful login
 		mockAxios.onPost("/login").reply(200, {
 			token: "mocked_token",
 			userData: { email: "test@example.com", name: "Test User" },
@@ -86,7 +80,6 @@ describe("Login Component", () => {
 			expect(screen.getByText(/Logging in.../)).toBeInTheDocument()
 		);
 
-		// Ensure the login was successful by checking for a redirect or loading behavior
 		expect(mockAxios.history.post[0].url).toBe("/login");
 	});
 
@@ -106,7 +99,6 @@ describe("Login Component", () => {
 		userEvent.type(emailInput, "wrong@example.com");
 		userEvent.type(passwordInput, "wrongpassword");
 
-		// Mocking the axios response for failed login
 		mockAxios.onPost("/login").reply(400, {
 			message: "Invalid Email or Password",
 		});
@@ -130,7 +122,6 @@ describe("Login Component", () => {
 		const createAccountLink = screen.getByText(/Create an Account/);
 		userEvent.click(createAccountLink);
 
-		// Expect to navigate to the /register route
 		expect(window.location.pathname).toBe("/register");
 	});
 });

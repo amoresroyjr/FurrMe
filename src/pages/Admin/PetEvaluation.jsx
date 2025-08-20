@@ -130,8 +130,6 @@ function PetEvaluation() {
 			document.removeEventListener("click", handleClickOutside);
 		}
 		if (!isModalOpen && modalContents.title != "") {
-			//navigate("/admin/request");
-			//window.location.reload();
 			navigate(0);
 		}
 

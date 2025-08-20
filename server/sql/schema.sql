@@ -71,7 +71,7 @@ CREATE TABLE IF NOT EXISTS community (
 
 /**INSERT INTO accounts (fname, lname, email, pass, role, image) VALUES
 ('pop', 'pop', 'liezlqt@gmail.com', '$2b$10$IsAlaJtWp62YcFYnVjr30.VY3swRd9waA9VTIh73ntBqgyTh5ed7K', 'User', 'https://res.cloudinary.com/dmquudoki/image/upload/v1746499718/i7iji9xbvp9bqpwbzy3e.jpg'),
-('Papa', 'Roy', 'paparoygwapo@gmail.com', '$2b$10$CmwPj9uqVSka3SlHy0GLUOmbiCql.jGhFA2ADJUtaSjwa5LD6bmxC', 'User', 'https://res.cloudinary.com/dmquudoki/image/upload/v1746458876/fvqsla62ybyo5ntcbump.jpg');
+('Papa', 'Roy', 'paparoygwapo@gmail.com', '$2b$10$CmwPj9uqVSka3SlHy0GLUOmbiCql.jGhFA2ADJUtaSjwa5LD6bmxC', 'Admin', 'https://res.cloudinary.com/dmquudoki/image/upload/v1746458876/fvqsla62ybyo5ntcbump.jpg');
 
 INSERT INTO pets (pet_id, name, category, address, description, color, gender, image, breed, age, behavior, health, status, createdBy, adoptedBy) 
 VALUES 

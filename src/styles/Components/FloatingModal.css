@@ -1,16 +1,15 @@
-/* The overlay covers the whole screen with semi-transparent background */
 .fmodal-overlay {
 	position: fixed;
 	top: 0;
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-color: rgba(0, 0, 0, 0.3); /* Slightly transparent background */
+	background-color: rgba(0, 0, 0, 0.3);
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	z-index: 1000; /* Ensure it's above other content */
-	pointer-events: auto; /* Allow background clicks */
+	z-index: 1000;
+	pointer-events: auto;
 	opacity: 0;
 	visibility: hidden;
 	transition:
@@ -18,13 +17,11 @@
 		visibility 0.3s ease;
 }
 
-/* When the modal is open, show the overlay with visibility and opacity */
 .fmodal-overlay.show {
 	opacity: 1;
 	visibility: visible;
 }
 
-/* Modal content styling */
 .fmodal-content {
 	background: white;
 	padding: 20px;
@@ -35,14 +32,13 @@
 	text-align: center;
 	position: relative;
 	transition: transform 0.3s ease;
-	transform: translateY(-50px); /* Start from above */
+	transform: translateY(-50px);
 }
 
 .fmodal-content.show {
-	transform: translateY(0); /* Move to its natural position */
+	transform: translateY(0);
 }
 
-/* Close button style */
 .fclose-button {
 	position: absolute;
 	top: 10px;
@@ -53,7 +49,6 @@
 	cursor: pointer;
 }
 
-/* Responsive styles */
 @media (max-width: 600px) {
 	.fmodal-content {
 		max-width: 90%;

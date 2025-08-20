@@ -49,8 +49,6 @@ const CountDownModal = ({ isOpen, onClose, title, children, link }) => {
 			) : (
 				<div className="modal-body">{children}</div>
 			)}
-
-			{/* Countdown Timer */}
 			<div className="countdown-timer">
 				<p>Closing in: {countdown} seconds</p>
 			</div>
